@@ -11,12 +11,12 @@ Provide interpretable insights for race engineers.
 
 Dataset
 
-Tire Data (tire_data.csv, optional):
+Tire Data:
 Columns: Driver, LapNumber, LapTime (s), Sector1Time, Sector2Time, Sector3Time, SpeedI1, SpeedI2, SpeedFL, SpeedST, TrackStatus, FreshTyre, Compound, TyreLife, Stint, TyreDegRate (target).
 Source: Formula 1 telemetry data (e.g., FastF1 API).
 
 
-Weather Data (weather_data.csv, optional):
+Weather Data:
 Columns: Time, AirTemp, TrackTemp.
 Source: Weather station data merged with telemetry.
 
@@ -27,7 +27,7 @@ Methodology
 The project is structured in 14 cells in the Jupyter Notebook, each handling a specific task:
 1–7: Data Loading and Preprocessing
 
-Data Loading: Load tire_data.csv and weather_data.csv using pandas.
+Data Loading: Load using pandas.
 Cleaning:
 Handle missing values (e.g., impute LapTime (s) with median).
 Remove outliers (e.g., LapTime (s) > 3 standard deviations).
@@ -167,10 +167,6 @@ git clone https://github.com/yourusername/tire-degradation-prediction.git
 cd tire-degradation-prediction
 
 
-Prepare Data:
-
-Place tire_data.csv and weather_data.csv in the project folder (if available).
-Ensure data matches the structure described in the Dataset section.
 
 
 Run the Notebook:
@@ -194,17 +190,6 @@ print(f"Predicted TyreDegRate: {prediction[0]:.4f} sec")
 
 
 
-
-
-How to Contribute
-
-Fork the repository and create a pull request with improvements.
-Suggest new features (e.g., Rainfall, WindSpeed) or models.
-Report issues via GitHub Issues.
-
-License
-MIT License. See LICENSE for details.
-Acknowledgments
 
 Data: Inspired by Formula 1 telemetry (e.g., FastF1 API).
 Tools: Built with Python, scikit-learn, TensorFlow, and SHAP.
